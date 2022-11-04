@@ -24,15 +24,7 @@ app.layout = dbc.Container([
 
     dbc.Row([
 
-        dbc.Col([
-            dcc.Dropdown(id='my-dpdn', multi=False, value='MON',
-                         options=[{'label':x, 'value':x}
-                                  for x in date],
-                         ),
-            dcc.Graph(id='line-fig', figure={},)
-        ],# width={'size':5, 'offset':1, 'order':1},
-           xs=12, sm=12, md=12, lg=5, xl=5
-        ),
+       
 
         dbc.Col([
             dcc.Dropdown(id='my-dpdn2', multi=True, value=['MON','TUE'],
@@ -43,19 +35,16 @@ app.layout = dbc.Container([
         ], #width={'size':5, 'offset':0, 'order':2},
            xs=12, sm=12, md=12, lg=5, xl=5
         ),
+        
+
+        dbc.Col(html.H1("Hello world :)",
+                        className='text-center text-primary mb-4'),
+                width=6)
 
     ], justify='start'),
     dbc.Row([
 
-        dbc.Col([
-            dcc.Dropdown(id='my-dpdn3', multi=False, value='MON',
-                         options=[{'label':x, 'value':x}
-                                  for x in date],
-                         ),
-            dcc.Graph(id='line-fig3', figure={})
-        ],# width={'size':5, 'offset':1, 'order':1},
-           xs=12, sm=12, md=12, lg=5, xl=5
-        ),
+        
 
         dbc.Col([
             dcc.Dropdown(id='my-dpdn4', multi=True, value=['MON','TUE'],
@@ -66,6 +55,12 @@ app.layout = dbc.Container([
         ], #width={'size':5, 'offset':0, 'order':2},
            xs=12, sm=12, md=12, lg=5, xl=5
         ),
+
+        dbc.Col(html.H1("Hello world :)",
+                        className='text-center text-primary mb-4'),
+                width=6)
+
+        
 
     ], justify='start'), 
  ]) # Horizontal:start,center,end,between,around
