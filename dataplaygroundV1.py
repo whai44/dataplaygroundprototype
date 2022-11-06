@@ -23,9 +23,6 @@ app.layout = dbc.Container([
     ),
 
     dbc.Row([
-
-       
-
         dbc.Col([
             dcc.Dropdown(id='my-dpdn2', multi=True, value=['MON','TUE'],
                          options=[{'label':x, 'value':x}
@@ -62,24 +59,65 @@ app.layout = dbc.Container([
     ],justify='start'),
     dbc.Row([
         html.Div([
-            # dcc.Input(),
-            html.Br(),
+            
             html.Br(),
             html.Br(),
             html.Br(),
             html.Br(),
             html.Br()
-            # dcc.Input(style={"padding": "15"})
             ])
     ]),
     dbc.Row([
         dbc.Col(html.H5("สถานะการจราจรของวันพรุ่งนี้",
                         className='text-center'),
                 width=12),
+    ], justify='start'),
+    dbc.Row([
+        html.Div([
+            html.Br(),
+            html.Br(),
+            html.Br()
+        ]),
+        dbc.Col(html.H5("เฟสการจราจร",
+                        className='text-center'),
+                width=4),
+        
     ], justify='start'), 
+    dbc.Row([
+        html.Img(src='https://i.ibb.co/d6vvqbg/2565-11-03-01-22-06.png', alt='image',height="300",width="9")
+    ]),
+    dbc.Row([
+        html.Div([
+            html.Br(),
+            html.Br(),
+            html.Br()
+        ]),
+        dbc.Col(html.H5("แนวโน้มรถติดในพื้นที่นี้ ลดลงอย่างไร (เพราะมาจาก rama4 model)",
+                        className='text-center'),
+                width=7),
+        html.Div([
+            html.Br(),
+            html.Br(),
+            html.Br()
+        ]),
+        dbc.Col(html.H5("ข้อมูลจากกล้องอื่นๆ เพิ่มเติม",
+                        className='text-center'),
+                width=7),
+        html.Div([
+            html.Br(),
+            html.Br(),
+            html.Br()
+        ]),      
+        dbc.Col(html.H5("ดาวน์โหลดข้อมูลสำหรับนักพัฒนา",
+                className='text-center'),
+                width=7),
+        html.Div([
+            html.Br(),
+            html.Br(),
+            html.Br()
+        ]), 
+    ], justify='start'),
  ]) # Horizontal:start,center,end,between,around
-
-    
 
 
 if __name__=='__main__':
