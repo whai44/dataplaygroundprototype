@@ -17,17 +17,81 @@ date = ['MON','TUE','WED','THU','FRI','SAT','SUN']
 app.layout = dbc.Container([
 
     dbc.Row(
-        dbc.Col(html.H1("Rama 4 Data Playground",
+        dbc.Col(html.H1("Rama 4 Model Data Playground",
                         className='text-center text-primary mb-4'),
                 width=12)
     ),
+    
+   
+
+    dbc.Row(
+        dbc.Col(html.H3("Kasemrad Junction",
+                        className='text-center text-info mb-4'),
+                width=12)
+    ),
+    
+    dbc.Row([
+        html.Div([
+            # dcc.Input(),
+            html.Br(),
+            html.Br(),
+        ])
+    ]),
+            
 
     dbc.Row([
 
        
 
         dbc.Col([
-            dcc.Dropdown(id='my-dpdn2', multi=True, value=['MON','TUE'],
+            html.H5("Data from CCTV",
+                        className='text-center text-secondary mb-4'),
+                
+            
+            dcc.Dropdown(id='my-dpdn1', multi=True, value=['MON','TUE'],
+                         options=[{'label':x, 'value':x}
+                                  for x in date],
+                         ),
+            dcc.Graph(id='line-fig1', figure={})
+        ], #width={'size':5, 'offset':0, 'order':2},
+           xs=12, sm=12, md=12, lg=5, xl=5
+        ),
+        
+
+        dbc.Col([
+            html.Br(),
+            html.Br(),
+            html.Br(),
+            html.Br(),
+            html.Br(),
+            html.Br(),
+            html.Br(),
+            html.Br(),
+            html.H5("insights from the data",
+                        className='text-center text-secondary mb-4'),
+            html.H5("insights from the data",
+                        className='text-center text-secondary mb-4'),
+            html.H5("insights from the data",
+                        className='text-center text-secondary mb-4'),
+            html.H5("insights from the data",
+                        className='text-center text-secondary mb-4'),
+                 
+                  ])
+
+    ], justify='start'),
+    dbc.Row([
+        html.Div([
+            # dcc.Input(),
+            html.Br(),
+            html.Br(),
+        ])
+    ]),
+    
+    dbc.Row([
+        dbc.Col([
+            html.H5("Data from Bluetooth sensor",
+                        className='text-center text-secondary mb-4'),
+                 dcc.Dropdown(id='my-dpdn2', multi=True, value=['MON','TUE'],
                          options=[{'label':x, 'value':x}
                                   for x in date],
                          ),
@@ -35,38 +99,153 @@ app.layout = dbc.Container([
         ], #width={'size':5, 'offset':0, 'order':2},
            xs=12, sm=12, md=12, lg=5, xl=5
         ),
-        
-
-        dbc.Col(html.H1("Hello world :)",
-                        className='text-center text-primary mb-4'),
-                width=6)
-
-    ], justify='start'),
-    dbc.Row([
-
-        
-
         dbc.Col([
-            dcc.Dropdown(id='my-dpdn4', multi=True, value=['MON','TUE'],
-                         options=[{'label':x, 'value':x}
-                                  for x in date],
-                         ),
-            dcc.Graph(id='line-fig4', figure={})
-        ], #width={'size':5, 'offset':0, 'order':2},
-           xs=12, sm=12, md=12, lg=5, xl=5
-        ),
-
-        dbc.Col(html.H1("Hello world :)",
-                        className='text-center text-primary mb-4'),
-                width=6)
+            html.Br(),
+            html.Br(),
+            html.Br(),
+            html.Br(),
+            html.Br(),
+            html.Br(),
+            html.Br(),
+            html.Br(),
+            
+            html.H5("insights from the data",
+                        className='text-center text-secondary mb-4'),
+                
+            html.H5("insights from the data",
+                        className='text-center text-secondary mb-4'),
+            html.H5("insights from the data",
+                        className='text-center text-secondary mb-4'),
+                 
+            html.H5("insights from the data",
+                        className='text-center text-secondary mb-4'),
+                 
+                  ])
 
         
 
     ], justify='start'), 
- ]) # Horizontal:start,center,end,between,around
+    dbc.Row([
+        html.Div([
+            # dcc.Input(),
+            html.Br(),
+            html.Br(),
+            html.Br(),
+        ])
+    ]),
+    dbc.Row(
+        dbc.Col(html.H2("Predictions",
+                        className='text-center text-primary mb-4'),
+                width=12)
+    ),
+    dbc.Row([
+        html.Div([
+            # dcc.Input(),
+            html.Br(),
+            html.Br(),
+            html.Br(),
+            html.Br(),
+            html.Br(),
+            html.Br(),
+            html.Br(),
+            html.Br(),
+            html.Br(),
+            html.Br(),
+            html.Br(),
+        ])
+    ]),
 
+
+
+
+    dbc.Row(
+        dbc.Col(html.H3("Traffic Signal Phase",
+                        className='text-center text-primary mb-4'),
+                width=12)
+    ),
+
+
+
+    dbc.Row([
+        html.Img(src='https://i.ibb.co/d6vvqbg/2565-11-03-01-22-06.png', alt='image',height="300",width="9")
+    ]),
+    dbc.Row([
+        html.Div([
+            # dcc.Input(),
+            html.Br(),
+            html.Br(),
+            html.Br(),
+            html.Br(),
+            ])
+    ]),
+
+    dbc.Row([
+        dbc.Col(html.H4("mornig rush hour",
+                        className='text-center text-warning mb-4'),
+                width=6),
+
+
+        dbc.Col(html.H4("evening rush hour",
+                        className='text-center text-warning mb-4'),
+                width=6),
+
+        ]),
+
+
+    dbc.Row([
+        dbc.Col([
+            
+            dcc.Graph(id='line-fig3', figure={})
+        ],width=6#width={'size':5, 'offset':0, 'order':2},
+           
+        ),
+        dbc.Col([
+           
+            dcc.Graph(id='line-fig4', figure={})
+        ], #width={'size':5, 'offset':0, 'order':2},
+           width=6),
+    
+    ]),
+    
+    
+    dbc.Row([
+        html.Br(),
+        html.Br(),
+        html.Br(),
+        html.Br(),
+        dbc.Col(html.H2("More informations",
+                        className='text-center text-primary mb-4'),
+                width=12),
+        html.Br(),
+        html.Br(),
+        html.Br(),
+        html.Br(),
+        ]),
+    dbc.Row([html.Br(),
+        html.Br(),
+        html.Br(),
+        html.Br(),
+        dbc.Col(html.H2("Download Data",
+                        className='text-center text-primary mb-4'),
+                width=12),
+        html.Br(),
+        html.Br(),
+        html.Br(),
+        html.Br(),
+    
+    
+    
+    
+    
+    ])
+        
     
 
 
+
+
+]) # Horizontal:start,center,end,between,around
+
+    
 if __name__=='__main__':
-    app.run_server(debug=True, port=8000)
+    app.run_server(debug=True, port=8001)
