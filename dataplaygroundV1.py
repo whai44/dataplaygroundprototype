@@ -53,18 +53,29 @@ app.layout = dbc.Container([
         #    xs=12, sm=12, md=12, lg=5, xl=5
         # ),
 
-        dbc.Col(html.H5("เวลาที่รถติดมากที่สุดของทุกวัน",
+        dbc.Col(html.H5("เวลาที่รถติดมากที่สุดของทุกวัน: ",
                         className='text-center'),
                 width=5),
-        dbc.Col(html.H5("วันที่รถติดมากที่สุดในสัปดาห์",
+        dbc.Col(html.H5("วันที่รถติดมากที่สุดในสัปดาห์: ",
                         className='text-center'),
                 width=6)
     ],justify='start'),
-    dbc.Row([]),
+    dbc.Row([
+        html.Div([
+            # dcc.Input(),
+            html.Br(),
+            html.Br(),
+            html.Br(),
+            html.Br(),
+            html.Br(),
+            html.Br()
+            # dcc.Input(style={"padding": "15"})
+            ])
+    ]),
     dbc.Row([
         dbc.Col(html.H5("สถานะการจราจรของวันพรุ่งนี้",
                         className='text-center'),
-                width=6),
+                width=12),
     ], justify='start'), 
  ]) # Horizontal:start,center,end,between,around
 
